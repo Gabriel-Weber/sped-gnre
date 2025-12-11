@@ -50,7 +50,7 @@ class Pdf
     public function create(Html $html)
     {
         $dompdf = $this->getDomPdf();
-        $dompdf->loadHtml($html->getHtml());
+        $dompdf->load_html($html->getHtml());
         $dompdf->render();
 
         return $dompdf;
