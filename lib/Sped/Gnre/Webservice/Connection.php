@@ -57,7 +57,7 @@ class Connection
         $this->setup = $setup;
 
         $this->curlOptions = array(
-            CURLOPT_PORT => 443,
+            CURLOPT_PORT => 444,
             CURLOPT_VERBOSE => 1,
             CURLOPT_HEADER => 1,
             CURLOPT_SSLVERSION => 3,
