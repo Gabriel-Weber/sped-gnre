@@ -176,11 +176,9 @@ class LoteV2 extends Lote {
             $contribuinteDestinatario->appendChild($razaoSocial);
             $contribuinteDestinatario->appendChild($municipio);
 
-
-
             $item->appendChild($receita);
             $item->appendChild($documentoOrigem);
-            if (!empty($gnreGuia->c26_produto)) {
+            if ($gnreGuia->c26_produto != '') {
                 $item->appendChild($produto);
             }
             $item->appendChild($referencia);
@@ -196,7 +194,6 @@ class LoteV2 extends Lote {
 
             $itensGNRE->appendChild($item);
 
-
             $dados->appendChild($ufFavorecida);
             $dados->appendChild($tipoGnre);
             $dados->appendChild($contribuinteEmitente);
@@ -204,9 +201,6 @@ class LoteV2 extends Lote {
             $dados->appendChild($valorGNRE);
             $dados->appendChild($dataPagamento);
             $dados->appendChild($identificadorGuia);
-
-
-
 
             $guia->appendChild($dados);
             $gnre->appendChild($loteGnre);
